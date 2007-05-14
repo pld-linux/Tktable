@@ -1,0 +1,11 @@
+--- Tktable2.9/Makefile.in.old	2007-05-15 00:18:06.456125425 +0200
++++ Tktable2.9/Makefile.in	2007-05-15 00:18:14.213941921 +0200
+@@ -301,7 +301,7 @@
+ 	(\
+ 	echo 'if {[catch {package require Tcl 8.2}]} return';\
+ 	echo 'package ifneeded $(PACKAGE_NAME) $(PACKAGE_VERSION) \
+-	    [list load [file join $$dir $(PKG_LIB_FILE)] $(PACKAGE_NAME)]'\
++	    [list load [file join $$dir .. $(PKG_LIB_FILE)] $(PACKAGE_NAME)]'\
+ 	) > pkgIndex.tcl
+ 
+ #========================================================================
